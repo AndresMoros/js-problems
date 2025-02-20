@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code of Clash</title>
+  </head>
+  <body>
+    <script>
+      const x = 5;
+      const n = 23;
+
+      const expected = 50;
+
+      // Write an answer using console.log()
+      // To debug: console.error('Debug messages...');
+
+      let nums = [];
+      let num = 0;
+      let multi = 0;
+
+      while (nums.reduce((acc, el) => acc + el, 0) < n) {
+        num = num + x * multi;
+        nums.push(num);
+        multi++;
+      }
+      document.write(
+        `
+        <p>
+        ${nums}
+        </p>
+        <p>
+        ${nums.reduce((acc, el) => acc + el, 0) === expected ? "Correct" : "Incorrect"}
+        </p>
+        `
+        );
+    </script>
+    <p></p>
+  </body>
+</html>

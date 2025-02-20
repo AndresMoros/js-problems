@@ -1,0 +1,49 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    margin: 20vh auto 0;
+    height: 300px;
+    width: 400px;
+    border: 1px solid red;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: #3c687a;
+}
+
+#number,
+#convert-btn,
+#output {
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#number,
+#convert-btn {
+    padding: 4px 12px;
+}
+
+#convert-btn {
+    background-color: #b63e3e;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#output {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    background: #000000;
+    padding: 4px 24px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
