@@ -1,14 +1,21 @@
+// Detectar si es par o impar
 const esPar = num => num % 2 === 0
 esPar(2)
 esPar(28)
 esPar(91)
 
+// ----------------------------
+
+// Invertir cadena de texto
 const invertirTexto = str => str.split('').reverse().join('');
 
 invertirTexto('olleh');
 invertirTexto('Minecraft');
 invertirTexto('Andrés');
 
+// ----------------------------
+
+// Contar las vocales en un texto
 const contarVocales = str => {
     const vocales = ['a', 'e', 'i', 'o', 'u'];
     let vocalNum = 0;
@@ -23,6 +30,10 @@ const contarVocales = str => {
 contarVocales('Minecraft')
 contarVocales('Hello World, I am Andrew')
 contarVocales('Visual Studio Code, NvChad, etcetera')
+
+// ----------------------------
+
+// Encontrar el número mayor
 
 const numeroMayor = nums => {
     let higher = nums[0];
