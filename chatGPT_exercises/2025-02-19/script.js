@@ -18,6 +18,7 @@
 const deleteDuplicates = (arr) => arr.sort((a, b) => a - b).filter((e, i) => e !== arr[i + 1]);
 
 deleteDuplicates([1, 2, 3, 1, 2, 4, 5])
+deleteDuplicates(["hola","hola", "jojo", "jojo"])
 
 // chatGPT: const deleteDuplicates = arr => [...new Set(arr)];
 // Explicación de la solución de chatGPT: El objeto Set le permite almacenar valores únicos de cualquier tipo, ya sea valores primitivos o referencias a objetos.
@@ -27,7 +28,7 @@ deleteDuplicates([1, 2, 3, 1, 2, 4, 5])
 // Encontrar factorial de un número
 
 const fact = n => {
-  var result = n;
+  let result = n;
   if (n === 0 || n === 1) 
     return 1; 
   while (n > 1) { 
@@ -39,36 +40,35 @@ const fact = n => {
 
 // const fact = n => n ? n * fact(n - 1) : 1
 
-fact(5)
+fact(5) //120
 
 // ----------------------------
 
 // Encontrar la palabra más larga v1
 // const findLongest = str => {
-//   let longest;
-//   let arr = str.split(' ')
-//   arr.forEach((e, i) => {
-//     if(arr[i + 1] && e.length > arr[i + 1].length){
-//       longest = e;
+//   let words = str.split(' ');
+//   let longest = '';
+//   for (let word of words) {
+//     if (word.length > longest.length) {
+//       longest = word;
 //     }
-//   })
-//   return longest
-// }
+//   }
+//   return longest;
+// };
 
 // Explicación:
 
 // arr[i + 1] && e.length > arr[i + 1].length: Esta condición primero verifica si arr[i + 1] existe (es decir, no es undefined). Solo si existe, procede a comparar las longitudes de las palabras.
 
 // Encontrar la palabra más larga v2
-const findLongest = str => {
-    return str.split(' ').reduce((longest, current) => {
-      return current.length > longest.length ? current : longest;
-    });
-  };
+const findLongest = str =>
+  str.split(' ').reduce((longest, current) =>
+    current.length > longest.length ? current : longest
+  );
   
   //Explicación:
   
-  // reduce: Este método recorre el array y acumula un valor (en este caso, la palabra más larga encontrada hasta el momento). La función de reducción compara la longitud de la palabra actual (current) con la longitud de la palabra más larga encontrada hasta ahora (longest). Si la palabra actual es más larga, se convierte en la nueva palabra más larga.
+  // reduce: Este método recorre el array y acumula un valor (en este caso, la palabra más larga encontrada hasta el momento). La función de reducción compara la longitud de la palabra actual (current) con la longitud de la palabra más larga encontrada hasta ahora (longest). 
   
   findLongest('El conocimiento es poder')
 
